@@ -12,7 +12,7 @@ module.exports = {
         Plant.findOne({_id: req.params.id})
         .then(onePlant => {
             res.json({plant: onePlant})
-        .catch((err) => console.log(err))
+        .catch((err) =>console.log(err))
         })
     },
     newPlant: (req, res) => {
@@ -32,8 +32,8 @@ module.exports = {
     },
     deletePlant: (req,res) => {
         Plant.deleteOne({_id: req.params.id})
-        .then(res => {
-            res.json({res: res})
+        .then(result => {
+            res.json({result: result})
         })
         .catch((err) => console.log(err))
     }
