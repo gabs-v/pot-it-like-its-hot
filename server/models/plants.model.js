@@ -18,10 +18,6 @@ const PlantSchema = new mongoose.Schema({
         type: String,
         required: [true, "Plant must have a sunlight care routine"]
     },
-    idealSeason: {
-        type: String,
-        required: [true, "Plant must have ideal season"]
-    },
     notes: {
         type: String,
         required: [false],
