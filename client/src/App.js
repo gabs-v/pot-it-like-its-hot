@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Form from './components/Form';
+import All from './components/All';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/newEntry' element={<Form/>}/>
+        <Route path='/all' element={<All/>} />
       </Routes>
     </div>
     </BrowserRouter>

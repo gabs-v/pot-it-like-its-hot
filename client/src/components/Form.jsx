@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
+
 
 const Form = (props) => {
-
+  const navigate = useNavigate()
   const {list,setList} = props
 
   const [plantName, setPlantName] = useState('')
@@ -27,14 +29,7 @@ const Form = (props) => {
     .then((res) => {
       console.log(res)
       console.log('submitted!')
-      setList([...list,res.data ])
-      setPlantName('')
-      setDatePlanted('')
-      setWaterCare('')
-      setSunlight('')
-      setNotes('')
-      setObservation('')
-      setOutcome('')
+      navigate(-1)
     })
     .catch((err) => console.log(err))
   }
