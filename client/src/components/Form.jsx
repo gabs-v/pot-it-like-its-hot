@@ -29,7 +29,7 @@ const Form = (props) => {
     .then((res) => {
       console.log(res)
       console.log('submitted!')
-      navigate(-1)
+      navigate('/all')
     })
     .catch((err) => console.log(err))
   }

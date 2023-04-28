@@ -2,7 +2,7 @@ const Plant = require ('../models/plants.model')
 
 module.exports = {
     findAllPlants: (req,res) => {
-        Plant.find()
+        Plant.find({})
             .then((allPlants) => {
                 res.json({plants: allPlants})
             })
