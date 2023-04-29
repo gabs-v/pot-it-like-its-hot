@@ -4,9 +4,9 @@ import {useNavigate} from 'react-router-dom'
 
 
 const Form = (props) => {
-  const navigate = useNavigate()
-  const {list,setList} = props
+  const {plantList, setPlantList} = props
 
+  const navigate = useNavigate()
   const [plantName, setPlantName] = useState('')
   const [datePlanted, setDatePlanted] = useState(Date())
   const [waterCare,setWaterCare] = useState('')
