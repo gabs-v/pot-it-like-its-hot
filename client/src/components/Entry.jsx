@@ -4,9 +4,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 const Form = (props) => {
-  const {plantList, setPlantList} = props
-
-  const navigate = useNavigate()
+  const {plants, setPlants} = props;
   const [plantName, setPlantName] = useState('')
   const [datePlanted, setDatePlanted] = useState(Date())
   const [waterCare,setWaterCare] = useState('')
@@ -29,7 +27,8 @@ const Form = (props) => {
     .then((res) => {
       console.log(res)
       console.log('submitted!')
-      navigate('/all')
+
+      setPlants([...plants, res.data])
     })
     .catch((err) => console.log(err))
   }
