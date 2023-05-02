@@ -20,7 +20,8 @@ const All = (props) => {
     <div>
       <div className='display'>
         {
-          plants && plants.map((plant) =>{
+          
+          plants.map((plant) =>{
             return <h2 key={plant.id} >{plant.plantName}</h2>
           })
         }

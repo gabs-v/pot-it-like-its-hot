@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 const Form = (props) => {
+  const navigate = useNavigate()
   const {plants, setPlants} = props;
   const [plantName, setPlantName] = useState('')
   const [datePlanted, setDatePlanted] = useState(Date())
@@ -27,8 +28,8 @@ const Form = (props) => {
     .then((res) => {
       console.log(res)
       console.log('submitted!')
-
       setPlants([...plants, res.data])
+      navigate('/home')
     })
     .catch((err) => console.log(err))
   }
